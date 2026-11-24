@@ -1,4 +1,3 @@
-
 local module = {}
 
 --// Services
@@ -64,8 +63,20 @@ local function IsValidCharacter(Model)
 		return false
 	end
 
-	if Players:GetPlayerFromCharacter(Model) == LocalPlayer then
+	local Player = Players:GetPlayerFromCharacter(Model)
+
+	if Player == LocalPlayer then
 		return false
+	end
+
+	if Player then
+		local Success, IsFriend = pcall(function()
+			return LocalPlayer:IsFriendsWith(Player.UserId)
+		end)
+
+		if Success and IsFriend then
+			return false
+		end
 	end
 
 	return Model:FindFirstChildOfClass("Humanoid") ~= nil

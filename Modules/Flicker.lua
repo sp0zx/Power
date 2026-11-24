@@ -12,7 +12,7 @@ local DASH_SOUND_ID = "rbxassetid://136726771728921"
 
 local Settings = {
 	Duration = 0.75,
-	Cooldown = 0.5,
+	Cooldown = 0.1,
 
 	Speed = 75,
 	Acceleration = 0.1,

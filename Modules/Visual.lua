@@ -18,7 +18,7 @@ local Settings = {
 
 	Colors = {
 		Color3.fromRGB(170, 0, 0),
-		Color3.fromRGB(15, 0, 0),
+		Color3.fromRGB(255, 0, 0),
 	},
 
 	HealthDisplay = {
@@ -27,7 +27,7 @@ local Settings = {
 		Size = UDim2.fromOffset(50, 18),
 		Offset = Vector3.new(0, 0, 0),
 
-		TextSize = 12,
+		TextSize = 15,
 		Font = Enum.Font.GothamBold,
 
 		TextColor = Color3.fromRGB(255, 255, 255),

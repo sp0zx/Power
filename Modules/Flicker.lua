@@ -10,7 +10,7 @@ local Player = Players.LocalPlayer
 local Flicker = game:GetObjects('rbxassetid://109243294526867')[1]
 
 local Settings = {
-	Duration = 0.5,
+	Duration = 0.75,
 	Cooldown = 0.5,
 
 	Speed = 75,
@@ -192,12 +192,6 @@ function module.Dash()
 				
 				Connection:Disconnect()
 				ActiveConnection = nil
-
-				Root.AssemblyLinearVelocity = Vector3.new(
-					0,
-					Root.AssemblyLinearVelocity.Y,
-					0
-				)
 			end
 		end
 	end)
